@@ -194,29 +194,29 @@ const StepCard = ({ number, title, description }) => {
 };
 
 const App = () => {
-    const platformCards = [
-        {
-            type: 'android',
-            icon: <FaAndroid size={40} color="#4caf50" />,
-            title: 'Android',
-            description: 'Get it on Google Play',
-            buttonText: 'Download',
-        },
-        {
-            type: 'desktop',
-            icon: <FaDesktop size={40} color="#667eea" />,
-            title: 'Desktop',
-            description: 'Try the web version',
-            buttonText: 'Launch App',
-        },
-        {
-            type: 'ios',
-            icon: <FaApple size={40} color="#000000" />,
-            title: 'iOS',
-            description: 'Download on App Store',
-            buttonText: 'Download',
-        },
-    ];
+  const platformCards = [
+    {
+      type: 'android',
+      icon: <FaAndroid size={40} color="#4caf50" />,
+      title: 'Android',
+      description: 'Get it on Google Play',
+      buttonText: 'Download',
+    },
+    {
+      type: 'desktop',
+      icon: <FaDesktop size={40} color="#667eea" />,
+      title: 'Desktop',
+      description: 'Try the web version',
+      buttonText: 'Launch App',
+    },
+    {
+      type: 'ios',
+      icon: <FaApple size={40} color="#000000" />,
+      title: 'iOS',
+      description: 'Download on App Store',
+      buttonText: 'Download',
+    },
+  ];
 
     const features = [
         {
@@ -286,7 +286,6 @@ const App = () => {
             <ScrollProgress />
             <Header />
             <section className={styles.hero} id="hero">
-                <ParticleBackground />
                 <div className={styles.heroContent}>
                     <h1 className="text-4xl md:text-6xl font-black mb-8 text-gray-800 animate-[fadeInUp_1s_ease-out]">Meet Aya</h1>
                     <p className={`${styles.heroSubtitle} animate-[fadeInUp_1s_ease-out_0.2s]`}>
@@ -305,23 +304,16 @@ const App = () => {
             </section>
             <section className={styles.features} id="features">
                 <h2 className={`${styles.sectionTitle} fade-in-up`}>Smart Safety Features</h2>
-                <p className={`${styles.sectionSubtitle} fade-in-up`}> Experience cutting-edge AI and sensor technology designed to protect you anytime, anywhere</p>
+                <p className={`${styles.sectionSubtitle} fade-in-up`}>Experience cutting-edge AI and sensor technology designed to protect you anytime, anywhere</p>
                 <div className={styles.featuresGrid}>
                     {features.map((feature, index) => (
                         <FeatureCard key={feature.title} {...feature} delay={index * 0.2} />
                     ))}
                 </div>
-                <div className="flex justify-center mt-16">
-                    <div className="flex gap-2">
-                        <div className="w-3 h-3 bg-white/40 rounded-full animate-[pulse_1.5s_ease-in-out_infinite]"></div>
-                        <div className="w-3 h-3 bg-white/60 rounded-full animate-[pulse_1.5s_ease-in-out_infinite_0.2s]"></div>
-                        <div className="w-3 h-3 bg-white/40 rounded-full animate-[pulse_1.5s_ease-in-out_infinite_0.4s]"></div>
-                    </div>
-                </div>
             </section>
             <section className={styles.howItWorks} id="how-it-works">
                 <h2 className={`${styles.sectionTitle} fade-in-up`}>How Aya Works</h2>
-                <p className={`${styles.sectionSubtitle} fade-in-up`}> Stay protected with these simple, powerful steps</p>
+                <p className={`${styles.sectionSubtitle} fade-in-up`}>Stay protected with these simple, powerful steps</p>
                 <div className={styles.steps}>
                     {steps.map(step => (
                         <StepCard key={step.number} {...step} />
